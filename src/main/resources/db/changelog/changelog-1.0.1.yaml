@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: ididyk
+      changes:
+        - loadData:
+            file: classpath:db/data/users_data.csv
+            tableName: users
+            separator: ","
+            encoding: UTF-8
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+              - column:
+                  name: first_name
+                  type: VARCHAR
+              - column:
+                  name: last_name
+                  type: VARCHAR
+              - column:
+                  name: age
+                  type: NUMERIC
+              - column:
+                  name: email
+                  type: VARCHAR
+              - column:
+                  name: registration_date
+                  type: TIMESTAMP
