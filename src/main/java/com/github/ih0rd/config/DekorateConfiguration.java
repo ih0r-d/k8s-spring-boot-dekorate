@@ -2,6 +2,8 @@ package com.github.ih0rd.config;
 
 import io.dekorate.docker.config.DockerBuildConfig;
 import io.dekorate.docker.config.DockerBuildConfigBuilder;
+import io.dekorate.helm.config.HelmChartConfig;
+import io.dekorate.helm.config.HelmChartConfigBuilder;
 import io.dekorate.kubernetes.config.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -45,6 +47,19 @@ public class DekorateConfiguration {
                 .withReplicas(3)
                 .withRequestResources(resourceRequirements)
                 .withLimitResources(limitResources)
+                .build();
+    }
+
+    @Bean
+    public HelmChartConfig helmChartConfig() {
+        return new HelmChartConfigBuilder()
+                .withName(appName)
+                .withVersion(appVersion)
+                .withDescription("Demo application helm chart")
+                .withKeywords("Demo", "java", "spring boot")
+                .withCreateValuesSchemaFile(true)
+                .withCreateTarFile(true)
+                .withCreateReadmeFile(true)
                 .build();
     }
 

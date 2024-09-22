@@ -2,10 +2,7 @@ package com.github.ih0rd.controller;
 
 import com.github.ih0rd.entity.User;
 import com.github.ih0rd.service.UserService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

@@ -2,7 +2,6 @@ package com.github.ih0rd.service;
 
 import com.github.ih0rd.entity.User;
 import com.github.ih0rd.repository.UserRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
